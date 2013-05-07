@@ -6,10 +6,11 @@
 Welcome to Django PyFixture's documentation!
 ============================================
 
-Contents:
+..
+   Contents:
 
-.. toctree::
-   :maxdepth: 2
+   .. toctree::
+      :maxdepth: 2
 
 Installation
 ============
@@ -17,8 +18,7 @@ Installation
 1.  Add `django_pyfixture` into your `INSTALLED_APPS`.
 2.  Create empty `<appname>/fixtures/__init__.py` file inside your
     django app called `<appname>`.
-3.  Create your fixtures inside `fixtures` directory as a regular
-    `foo.py` file.
+3.  Create your fixtures in files like `<appname>/fixtures/foo.py`.
 4.  Put content inside that file that looks like this:
 
 .. code-block:: python
