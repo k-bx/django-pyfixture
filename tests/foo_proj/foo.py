@@ -12,7 +12,7 @@ if not settings.configured:
                 'NAME': '/tmp/django_pyfixture.sqlite3'}},
         INSTALLED_APPS=('foo_app',))
 
-from django.conf.urls.defaults import patterns
+from django.conf.urls import patterns
 urlpatterns = patterns(
     '',
     (r'^$', 'foo.index'),

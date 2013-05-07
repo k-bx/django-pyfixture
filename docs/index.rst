@@ -35,6 +35,14 @@ Installation
 
 4.  Add inheritance into your base test class like this:
 
+
+    .. warning::
+
+       Make sure you put `PyFixtureTestCase` before
+       `DjangoTestCase`. Seems that Unittest2-guys didn't inherit
+       `object`, so now multi-inheritance via `super()` doesn't work
+       good if order isn't right.
+
 .. code-block:: python
 
     # file proj/utils/test_bases.py
@@ -43,27 +51,38 @@ Installation
     from django.test import TestCase as DjangoTestCase
 
 
-    class BaseTestCase(DjangoTestCase, PyFixtureTestCase):
+    class BaseTestCase(PyFixtureTestCase, DjangoTestCase):
         pass
 
 5.  Add `py_fixtures` list inside your tests like this:
 
-.. code-block:: python
+    .. code-block:: python
 
-    # file proj/appname/tests/foo_tests.py
+        # file proj/appname/tests/foo_tests.py
 
-    class TestFoo(BaseTestCase):
-        py_fixtures = ['foo']
+        class TestFoo(BaseTestCase):
+            py_fixtures = ['foo']
 
-        def test_should_get_list_of_foo(self):
-            # do something with foo here
-            Foo.objects.all()
+            def test_should_get_list_of_foo(self):
+                # do something with foo here
+                Foo.objects.all()
 
 6.  To load some data from terminal use
 
-.. code-block:: bash
+    .. code-block:: bash
 
-    python loaddata_py foo
+        python loaddata_py foo
+
+Additional info
+===============
+
+.. warning::
+
+   Remember, there's no magical way to clean-up any side-effects you
+   cause, so if you do something beyond transactions (like writing to
+   redis) -- make sure you'll add cleanup after test or inside base
+   test case. Cleanup method will be added into `django-pyfixture`
+   later.
 
 Indices and tables
 ==================

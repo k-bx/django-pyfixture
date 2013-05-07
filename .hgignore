@@ -1,3 +1,4 @@
 syntax: glob
 docs/_build/
 *.pyc
+django_pyfixture.egg-info/

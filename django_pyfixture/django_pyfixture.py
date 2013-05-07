@@ -19,6 +19,7 @@ class PyFixtureTestCase(object):
 
     def setUp(self):
         super(PyFixtureTestCase, self).setUp()
+        load_py_fixtures_from_test_case(self)
 
     def tearDown(self):
         super(PyFixtureTestCase, self).tearDown()

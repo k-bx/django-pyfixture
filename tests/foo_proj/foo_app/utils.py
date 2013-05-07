@@ -4,5 +4,5 @@ from django_pyfixture import PyFixtureTestCase
 from django.test import TestCase as DjangoTestCase
 
 
-class BaseTestCase(DjangoTestCase, PyFixtureTestCase):
+class BaseTestCase(PyFixtureTestCase, DjangoTestCase):
     pass
