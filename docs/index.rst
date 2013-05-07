@@ -12,6 +12,12 @@ Welcome to Django PyFixture's documentation!
    .. toctree::
       :maxdepth: 2
 
+Resources
+=========
+
+- `Project on PyPi <https://pypi.python.org/pypi/django_pyfixture/>`_
+- `Project on BitBucket <https://bitbucket.org/k_bx/django-pyfixture>`_
+
 Installation
 ============
 
