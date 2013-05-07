@@ -71,7 +71,7 @@ Installation
 
     .. code-block:: bash
 
-        python loaddata_py foo
+        python manage.py loaddata_py foo
 
 Additional info
 ===============

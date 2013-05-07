@@ -10,7 +10,8 @@ if not settings.configured:
             'default': {
                 'ENGINE': 'django.db.backends.sqlite3',
                 'NAME': '/tmp/django_pyfixture.sqlite3'}},
-        INSTALLED_APPS=('foo_app',))
+        INSTALLED_APPS=('django_pyfixture',
+                        'foo_app',))
 
 from django.conf.urls import patterns
 urlpatterns = patterns(

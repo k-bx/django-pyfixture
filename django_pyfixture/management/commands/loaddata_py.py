@@ -9,7 +9,7 @@ class Command(BaseCommand):
     """Command that gives you an ability to load fixtures written in python.
 
     Just put your fixtures into regular `app/fixtures/foo.py` file,
-    then add them into 
+    then add them into `py_fixtures` list inside your test class.
     """
     args = '<fixture_name fixture_name ...>'
     help = 'Loads/executes py-fixtures'
