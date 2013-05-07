@@ -57,10 +57,15 @@ Installation
             # do something with foo here
             Foo.objects.all()
 
+7.  To load some data from terminal use
+
+.. code-block:: bash
+
+    python loaddata_py foo
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
