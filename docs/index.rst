@@ -18,8 +18,8 @@ Installation
 1.  Add `django_pyfixture` into your `INSTALLED_APPS`.
 2.  Create empty `<appname>/fixtures/__init__.py` file inside your
     django app called `<appname>`.
-3.  Create your fixtures in files like `<appname>/fixtures/foo.py`.
-4.  Put content inside that file that looks like this:
+3.  Create your fixtures in files like `<appname>/fixtures/foo.py`
+    with content similar to this:
 
 .. code-block:: python
 
@@ -27,12 +27,13 @@ Installation
 
     from django_pyfixture import PyFixtureBase
 
+
     class FooData(PyFixtureBase):
         def load_data(self):
             # create your python objects here
             pass
 
-5.  Add inheritance into your base test class like this:
+4.  Add inheritance into your base test class like this:
 
 .. code-block:: python
 
@@ -42,9 +43,10 @@ Installation
     from django.test import TestCase as DjangoTestCase
 
 
-    class BaseTestCase(DjangoTestCase, PyFixtureTestCase)
+    class BaseTestCase(DjangoTestCase, PyFixtureTestCase):
+        pass
 
-6.  Add `py_fixtures` list inside your tests like this:
+5.  Add `py_fixtures` list inside your tests like this:
 
 .. code-block:: python
 
@@ -57,7 +59,7 @@ Installation
             # do something with foo here
             Foo.objects.all()
 
-7.  To load some data from terminal use
+6.  To load some data from terminal use
 
 .. code-block:: bash
 
