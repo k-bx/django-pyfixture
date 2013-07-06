@@ -17,6 +17,7 @@ Resources
 
 - `Project on PyPi <https://pypi.python.org/pypi/django_pyfixture/>`_
 - `Project on BitBucket <https://bitbucket.org/k_bx/django-pyfixture>`_
+- `Mirror on github <https://github.com/k-bx/django-pyfixture>`_
 
 Installation
 ============
